@@ -1,26 +1,56 @@
-<h1>Users</h1>
+<md-sidenav-container>
 
-<md-grid-list cols="4" rowHeight="200px">
+  <md-sidenav #sidenav>
+    Sidenav
+  </md-sidenav>
 
-  <md-grid-tile *ngFor="let user of users | async">
-    <md-card class="example-card">
+  <md-toolbar color="primary">
+    <a md-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </a>
 
-      <md-card-header>
-        <div md-card-avatar class="example-header-image"></div>
-        <h4 md-line>{{user.name}}</h4>
-        <md-card-subtitle>{{user.age}} anos</md-card-subtitle>
-      </md-card-header>
+    2BFit
 
-      <md-card-content>
-        <p md-line>mora em {{user.address}}</p>
-      </md-card-content>
+  </md-toolbar>
 
-      <md-card-actions>
-        <button md-button>LIKE</button>
-        <button md-button>SHARE</button>
-      </md-card-actions>
+  <div class="app-content">
 
-    </md-card>
-  </md-grid-tile>
+    <h1>Users</h1>
 
-</md-grid-list>
+    <md-spinner *ngIf="!users"></md-spinner>
+
+    <div [fxLayout]="column" fxLayoutWrap style="cursor: pointer;">
+
+      <div fxFlex *ngFor="let user of users | async">
+        
+        <md-card class="example-card">
+
+          <md-card-header>
+            <div md-card-avatar class="example-header-image"></div>
+            <md-card-title>{{user.name}}</md-card-title>
+            <md-card-subtitle>{{user.age}} anos</md-card-subtitle>
+          </md-card-header>
+
+          <md-card-content>
+            <p md-line>mora em {{user.address}}</p>
+          </md-card-content>
+
+          <md-card-actions>
+            <button md-button>LIKE</button>
+            <button md-button>SHARE</button>
+          </md-card-actions>
+
+        </md-card>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</md-sidenav-container>
+
+<span class="app-action">
+  <button md-fab><md-icon>add</md-icon></button>
+</span>

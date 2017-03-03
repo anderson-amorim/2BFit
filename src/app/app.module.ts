@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 
 // Must export the config
@@ -18,7 +19,8 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]

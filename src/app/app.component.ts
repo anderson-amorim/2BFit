@@ -13,4 +13,5 @@ export class AppComponent {
     this.users = af.database.list('/users');
     this.itens = af.database.list('/itens');
   }
+  
 }

@@ -1,9 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+@import '~@angular/material/core/theming/all-theme';
+@include mat-core();
+
+$dark-app-primary: mat-palette($mat-indigo);
+$dark-app-accent:  mat-palette($mat-red);
+$dark-app-theme: mat-light-theme($dark-app-primary, $dark-app-accent);
+@include angular-material-theme($dark-app-theme);
+
 body {
-    background-color: #1E1E1E;
-    color: whitesmoke;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
