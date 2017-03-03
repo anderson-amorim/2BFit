@@ -1,6 +1,14 @@
-# BeFit
+# 2BFit
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.0.
+
+Tecnologies involved:
+
+ [Angular](https://github.com/angular/angular)
+ [Angular CLI](https://github.com/angular/angular-cli)
+ [Material Design 2](https://github.com/angular/material2)
+ [Angular Fire 2](https://github.com/angular/angularfire2)
+ [Angular CLI](https://github.com/angular/angular-cli)
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
