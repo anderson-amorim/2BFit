@@ -1,20 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
+import { AngularFireModule } from 'angularfire2';
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
+
+// Must export the config
+export const firebaseConfig = {
+  apiKey: "AIzaSyBs62Xt9AsvLD8cVgR5M8nBgM552S7hniQ",
+  authDomain: "bfit-763b7.firebaseapp.com",
+  databaseURL: "https://bfit-763b7.firebaseio.com",
+  storageBucket: "bfit-763b7.appspot.com",
+  messagingSenderId: "611190465729"
+};
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    AngularFireModule.initializeApp(firebaseConfig),
+    MaterialModule
   ],
-  providers: [],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
