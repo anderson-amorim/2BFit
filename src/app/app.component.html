@@ -11,7 +11,17 @@
 
     2BFit
 
+    <span class="spacer"></span>
+
+    <a md-button (click)="login()">
+      Login
+    </a>
+    <a md-button (click)="logout()">
+      logout
+    </a>
+
   </md-toolbar>
+
 
   <div class="app-content">
 
@@ -22,7 +32,7 @@
     <div [fxLayout]="column" fxLayoutWrap style="cursor: pointer;">
 
       <div fxFlex *ngFor="let user of users | async">
-        
+
         <md-card class="example-card">
 
           <md-card-header>
@@ -32,12 +42,11 @@
           </md-card-header>
 
           <md-card-content>
-            <p md-line>mora em {{user.address}}</p>
+            <p md-line>{{user.address}}</p>
           </md-card-content>
 
           <md-card-actions>
-            <button md-button>LIKE</button>
-            <button md-button>SHARE</button>
+            <button md-button (click)="delete(user)">Delete</button>
           </md-card-actions>
 
         </md-card>

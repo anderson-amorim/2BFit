@@ -4,7 +4,7 @@
 @import '~@angular/material/core/theming/all-theme';
 @include mat-core();
 
-$dark-app-primary: mat-palette($mat-indigo);
+$dark-app-primary: mat-palette($mat-blue);
 $dark-app-accent:  mat-palette($mat-red);
 $dark-app-theme: mat-light-theme($dark-app-primary, $dark-app-accent);
 @include angular-material-theme($dark-app-theme);
